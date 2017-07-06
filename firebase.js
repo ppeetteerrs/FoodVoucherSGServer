@@ -1,3 +1,4 @@
+"use strict";
 var firebase = require("firebase");
 
 var config = {

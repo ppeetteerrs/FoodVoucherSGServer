@@ -15,7 +15,7 @@ var mailer = require('./mailer.js');
 
 function createBarcodes(codeArray, callback) {
   var barcodeArray = [];
-  for (i = 0; i < codeArray.length; i++) {
+  for (var i = 0; i < codeArray.length; i++) {
     bwipjs.toBuffer({
       bcid: 'code128', // Barcode type
       text: codeArray[i].toString(),
@@ -39,7 +39,7 @@ function createPDFFile(uid, barcodeArray) {
   });
   let filename = "./pdf/test/" + uid + ".pdf";
   stream = doc.pipe(fs.createWriteStream(filename));
-  for (i = 0; i < barcodeArray.length; i++) {
+  for (var i = 0; i < barcodeArray.length; i++) {
     let pageIndex = i % 9;
     let rowIndex = pageIndex % 3;
     let columnIndex = (pageIndex - rowIndex) / 3;
