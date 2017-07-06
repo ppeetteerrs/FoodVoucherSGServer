@@ -1,3 +1,4 @@
+"use strict";
 // System
 var exports = module.exports;
 var fs = require('fs');
