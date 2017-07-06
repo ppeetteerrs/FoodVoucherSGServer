@@ -3,11 +3,16 @@ var express = require('express');
 var app = express();
 var generator = require('./generator');
 var validator = require('./validator');
+var fb = require('./firebase')
 var path = require('path');
 var bodyParser = require('body-parser');
 var fs  = require('fs');
 
+fb.signin.then(() => {
+  console.log("Signed In");
+});
 
+// Setting Response  Headers
 app.all('*', function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DEvarE, OPTIONS');
@@ -15,22 +20,34 @@ app.all('*', function(req, res, next) {
   next();
 });
 
+// Body Parsing
 app.use(bodyParser.json());
 
-app.get('/newpdf',(req, res) => {
+app.get('/',(req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Content-Type', 'application/pdf');
-  res.setHeader('Content-Disposition', 'attachment; filename=barcode.pdf');
-  res.send(generator.generatePDF());
+  res.setHeader('Content-Type', 'text/plain');
+  res.send("Welcome to your own server boy!");
 })
 
-app.get('/newbarcodes.json',(req, res) => {
+//Requesting For PDF
+app.get('/newpdf',(req, res) => {
+  let amount = req.query.amount;
+  let email = req.query.email;
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Content-Type', 'text/plain');
+  generator.completePDF(amount, email, (filename) => {
+    res.send("PDF Sent " + filename);
+  });
+  
+})
+
+app.get('/newbarcodes',(req, res) => {
+  let options = JSON.parse(req.query.options);
   var datas = generator.generateJSON(25);  
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Content-Type', 'application/json');
   res.json(datas);
   res.end();
-  
 })
 
 app.get('/check.json',(req, res) => {
@@ -39,13 +56,6 @@ app.get('/check.json',(req, res) => {
   res.setHeader('Content-Type', 'application/json');
   var data = validator.checkCode(code)
   res.send(data);
-})
-
-app.get('/bible',(req, res) => {
-  var sentence = req.query.sentence;
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Content-Type', 'text/plain');
-  res.send(sentence);
 })
 
 app.listen(process.env.PORT, process.env.IP, function () {
