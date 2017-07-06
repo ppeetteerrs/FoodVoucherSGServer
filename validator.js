@@ -1,15 +1,23 @@
 "use strict";
 var exports = module.exports;
+var cardsRef = require('./firebase.js').cardsRef;
 
-var codeBase = [87342543718312,87342599240069,87342541665422,87342584611529,87342578624648,87342513827398,87342556654769,87342530760010,87342513687633,87342520774054,87342539559593,87342513631310,87342571123841,87342552568371,87342526590338,87342568278320,87342514382542,87342517036101,87342519711752,87342593705931,87342592407150,87342511292020,87342530452142,87342592971458,87342562657233];
-
-exports.checkCode = function(code){
-    code = parseInt(code);
-    if(codeBase.indexOf(code) != -1){
-        var array = [1];
-        return JSON.stringify(array);
-    } else{
-        var array = [-1];
-        return JSON.stringify(array);
+exports.checkCode = function (code, callback) {
+  var found = false;
+  var array = [];
+  cardsRef.once('value', function (snapshot) {
+    var found = false;
+    snapshot.forEach(function (childSnapshot) {
+      array = array.concat(childSnapshot.val());
+    });
+    console.log("Code: "  + code);
+    for(var i=0; i<array.length; i++){
+      console.log(i + " " + array[i]);
+      if(parseInt(array[i]) == parseInt(code)){
+        found = true;
+        break;
+      }
     }
+    callback(found);
+  });
 }
