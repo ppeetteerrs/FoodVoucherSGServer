@@ -38,7 +38,7 @@ function createPDFFile(uid, barcodeArray) {
     layout: "landscape"
   });
   let filename = "./pdf/test/" + uid + ".pdf";
-  stream = doc.pipe(fs.createWriteStream(filename));
+  let stream = doc.pipe(fs.createWriteStream(filename));
   for (var i = 0; i < barcodeArray.length; i++) {
     let pageIndex = i % 9;
     let rowIndex = pageIndex % 3;
