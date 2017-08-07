@@ -1,0 +1,290 @@
+2017-07-20T04:47:18.954502001 0.023422s notice: Recursively removing directory /home/ubuntu/workspace/FoodVoucherSGServer/rethinkdb_data/tmp
+2017-07-20T04:47:18.964274252 0.033197s notice: Initializing directory /home/ubuntu/workspace/FoodVoucherSGServer/rethinkdb_data
+2017-07-20T04:47:18.964424626 0.033343s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/ubuntu/workspace/FoodVoucherSGServer/rethinkdb_data' did not already exist or is empty.)
+2017-07-20T04:47:18.964479739 0.033398s notice: Running rethinkdb 2.3.6~0trusty (GCC 4.8.2)...
+2017-07-20T04:47:18.969644236 0.038566s notice: Running on Linux 4.9.17-c9 x86_64
+2017-07-20T04:47:18.969721189 0.038640s notice: Loading data from directory /home/ubuntu/workspace/FoodVoucherSGServer/rethinkdb_data
+2017-07-20T04:47:19.030768240 0.099690s info: Automatically using cache size of 6168 MB
+2017-07-20T04:47:19.031890929 0.100810s notice: Listening for intracluster connections on port 29015
+2017-07-20T04:47:19.033546920 0.102465s notice: Listening for client driver connections on port 28015
+2017-07-20T04:47:19.033729608 0.102648s notice: Listening for administrative HTTP connections on port 8080
+2017-07-20T04:47:19.033731463 0.102650s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-07-20T04:47:19.033733996 0.102652s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-07-20T04:47:19.033740940 0.102659s notice: Listening on http addresses: 127.0.0.1, ::1
+2017-07-20T04:47:19.033768151 0.102687s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-20T04:47:19.033777923 0.102696s notice: Server ready, "ppeetteerrs_food_voucher_server_4873469_zox" 9609f416-2f4c-4ec9-8e34-7bbe5e70043e
+2017-07-20T04:55:15.681479881 476.750399s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2017-07-20T04:55:15.681641252 476.750560s notice: Shutting down client connections...
+2017-07-20T04:55:15.681773571 476.750692s notice: All client connections closed.
+2017-07-20T04:55:15.681776821 476.750695s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-07-20T04:55:15.696697478 476.765617s notice: Storage engine shut down.
+2017-07-20T04:55:19.937946844 0.051444s notice: Running rethinkdb 2.3.6~0trusty (GCC 4.8.2)...
+2017-07-20T04:55:19.950501444 0.063997s notice: Running on Linux 4.9.17-c9 x86_64
+2017-07-20T04:55:19.950616628 0.064110s notice: Loading data from directory /home/ubuntu/workspace/FoodVoucherSGServer/rethinkdb_data
+2017-07-20T04:55:19.979250854 0.092746s info: Automatically using cache size of 6414 MB
+2017-07-20T04:55:19.981409202 0.094902s notice: Listening for intracluster connections on port 29015
+2017-07-20T04:55:19.982536306 0.096029s notice: Listening for client driver connections on port 28015
+2017-07-20T04:55:19.982651074 0.096144s notice: Listening for administrative HTTP connections on port 8080
+2017-07-20T04:55:19.984150281 0.097643s notice: Listening on cluster addresses: 127.0.0.1, 172.17.0.220, ::1, fe80::42:acff:fe11:dc%29828
+2017-07-20T04:55:19.984805849 0.098299s notice: Listening on driver addresses: 127.0.0.1, 172.17.0.220, ::1, fe80::42:acff:fe11:dc%29828
+2017-07-20T04:55:19.987708412 0.101201s notice: Listening on http addresses: 127.0.0.1, 172.17.0.220, ::1, fe80::42:acff:fe11:dc%29828
+2017-07-20T04:55:19.987718459 0.101211s notice: Server ready, "ppeetteerrs_food_voucher_server_4873469_zox" 9609f416-2f4c-4ec9-8e34-7bbe5e70043e
+2017-07-20T04:55:19.992334693 0.105828s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:55:26.996234473 7.109728s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:55:34.609461300 14.722955s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:55:41.011391347 21.124885s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:55:47.081900492 27.195394s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:55:53.989246780 34.102740s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:56:00.988556355 41.102050s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:56:06.989570659 47.103064s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:56:13.989482557 54.102976s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:56:21.006424299 61.119918s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:56:27.989514968 68.103008s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:56:34.986926466 75.100420s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:56:41.990528246 82.104021s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:56:49.245306869 89.358800s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:56:54.994183207 95.107677s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:57:01.992920646 102.106414s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:57:09.603804866 109.717299s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:57:16.003210917 116.116704s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:57:18.806678291 118.920172s info: Table 574251ab-3c7d-4cb3-898b-080fb4e98f60: Starting a new Raft election for term 1.
+2017-07-20T04:57:18.806933192 118.920427s info: Table 574251ab-3c7d-4cb3-898b-080fb4e98f60: Added replica on this server.
+2017-07-20T04:57:18.821683029 118.935176s info: Table 574251ab-3c7d-4cb3-898b-080fb4e98f60: This server is Raft leader for term 1. Latest log index is 0.
+2017-07-20T04:57:23.007153580 123.120647s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:57:29.985592030 130.099086s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:57:36.991454614 137.104948s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:57:43.611726905 143.725220s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:57:49.004916237 149.118409s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:57:55.996615597 156.110109s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:58:03.005685156 163.119179s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T04:58:10.307355080 170.420849s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2017-07-20T04:58:10.307646615 170.421140s notice: Shutting down client connections...
+2017-07-20T04:58:10.307706636 170.421199s notice: All client connections closed.
+2017-07-20T04:58:10.307708768 170.421201s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-07-20T04:58:10.334015730 170.447509s notice: Storage engine shut down.
+2017-07-20T05:00:30.133517293 0.068355s notice: Running rethinkdb 2.3.6~0trusty (GCC 4.8.2)...
+2017-07-20T05:00:30.137825312 0.072661s notice: Running on Linux 4.9.17-c9 x86_64
+2017-07-20T05:00:30.137892173 0.072726s notice: Loading data from directory /home/ubuntu/workspace/FoodVoucherSGServer/rethinkdb_data
+2017-07-20T05:00:30.161540326 0.096376s info: Automatically using cache size of 6027 MB
+2017-07-20T05:00:30.162448580 0.097282s notice: Listening for intracluster connections on port 29015
+2017-07-20T05:00:30.187098420 0.121933s notice: Listening for client driver connections on port 28015
+2017-07-20T05:00:30.187377946 0.122212s notice: Listening for administrative HTTP connections on port 8080
+2017-07-20T05:00:30.187396202 0.122230s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-07-20T05:00:30.187399402 0.122233s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-07-20T05:00:30.189242433 0.124076s notice: Listening on http addresses: 127.0.0.1, 172.17.0.220, ::1, fe80::42:acff:fe11:dc%29828
+2017-07-20T05:00:30.189244115 0.124078s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-20T05:00:30.189245224 0.124079s notice: Server ready, "ppeetteerrs_food_voucher_server_4873469_zox" 9609f416-2f4c-4ec9-8e34-7bbe5e70043e
+2017-07-20T05:00:31.184904216 1.119738s info: Table 574251ab-3c7d-4cb3-898b-080fb4e98f60: Starting a new Raft election for term 2.
+2017-07-20T05:00:31.192649035 1.127483s info: Table 574251ab-3c7d-4cb3-898b-080fb4e98f60: This server is Raft leader for term 2. Latest log index is 2.
+2017-07-20T05:00:36.989495054 6.924329s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T05:00:42.877579269 12.812413s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T05:00:49.876189872 19.811024s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T05:00:55.887121537 25.821956s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T05:01:01.892608819 31.827443s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T05:01:08.891797087 38.826631s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T05:01:14.887175592 44.822010s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T05:01:20.892534513 50.827369s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T05:01:27.880559478 57.815394s notice: Someone asked for the nonwhitelisted file "/socket.io/".  If this should be accessible, add it to the static web assets.
+2017-07-20T05:01:29.776372480 59.711207s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2017-07-20T05:01:29.776658678 59.711493s notice: Shutting down client connections...
+2017-07-20T05:01:29.777092461 59.711926s notice: All client connections closed.
+2017-07-20T05:01:29.777102320 59.711936s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-07-20T05:01:29.937262114 59.872096s notice: Storage engine shut down.
+2017-07-20T05:01:34.555309540 0.013022s notice: Running rethinkdb 2.3.6~0trusty (GCC 4.8.2)...
+2017-07-20T05:01:34.560168932 0.017880s notice: Running on Linux 4.9.17-c9 x86_64
+2017-07-20T05:01:34.560258640 0.017967s notice: Loading data from directory /home/ubuntu/workspace/FoodVoucherSGServer/rethinkdb_data
+2017-07-20T05:01:34.601279963 0.058991s info: Automatically using cache size of 6079 MB
+2017-07-20T05:01:34.602873208 0.060582s notice: Listening for intracluster connections on port 29015
+2017-07-20T05:01:34.631891178 0.089600s notice: Listening for client driver connections on port 28015
+2017-07-20T05:01:34.632278912 0.089988s notice: Listening for administrative HTTP connections on port 8081
+2017-07-20T05:01:34.632287068 0.089995s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-07-20T05:01:34.632302773 0.090011s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-07-20T05:01:34.633677801 0.091386s notice: Listening on http addresses: 127.0.0.1, 172.17.0.220, ::1, fe80::42:acff:fe11:dc%29828
+2017-07-20T05:01:34.633699236 0.091407s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-20T05:01:34.633700106 0.091408s notice: Server ready, "ppeetteerrs_food_voucher_server_4873469_zox" 9609f416-2f4c-4ec9-8e34-7bbe5e70043e
+2017-07-20T05:01:36.163164310 1.620873s info: Table 574251ab-3c7d-4cb3-898b-080fb4e98f60: Starting a new Raft election for term 3.
+2017-07-20T05:01:36.172473048 1.630182s info: Table 574251ab-3c7d-4cb3-898b-080fb4e98f60: This server is Raft leader for term 3. Latest log index is 5.
+2017-07-20T05:37:54.366585886 2179.824295s notice: Removing file /home/ubuntu/workspace/FoodVoucherSGServer/rethinkdb_data/574251ab-3c7d-4cb3-898b-080fb4e98f60
+2017-07-20T05:37:54.366601058 2179.824309s info: Table 574251ab-3c7d-4cb3-898b-080fb4e98f60: Deleted the table.
+2017-07-20T05:38:16.051984032 2201.509693s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: Starting a new Raft election for term 1.
+2017-07-20T05:38:16.052342763 2201.510051s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: Added replica on this server.
+2017-07-20T05:38:16.059427160 2201.517136s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: This server is Raft leader for term 1. Latest log index is 0.
+2017-07-20T05:41:59.658628544 2425.116337s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: Configuration is changing.
+2017-07-20T05:42:09.673095831 2435.130805s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: Configuration is changing.
+2017-07-20T05:43:13.679844234 2499.137553s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: Configuration is changing.
+2017-07-20T08:55:23.362586110 14028.820295s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2017-07-20T08:55:23.362789184 14028.820498s notice: Shutting down client connections...
+2017-07-20T08:55:23.365304136 14028.823013s notice: All client connections closed.
+2017-07-20T08:55:23.365306781 14028.823015s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-07-20T08:55:23.411479660 14028.869189s notice: Storage engine shut down.
+2017-07-20T08:55:30.077141899 0.023172s notice: Running rethinkdb 2.3.6~0trusty (GCC 4.8.2)...
+2017-07-20T08:55:30.084565063 0.030595s notice: Running on Linux 4.9.17-c9 x86_64
+2017-07-20T08:55:30.084788781 0.030815s notice: Loading data from directory /home/ubuntu/workspace/FoodVoucherSGServer/rethinkdb_data
+2017-07-20T08:55:30.122507913 0.068536s info: Automatically using cache size of 5404 MB
+2017-07-20T08:55:30.123647293 0.069673s notice: Listening for intracluster connections on port 29015
+2017-07-20T08:55:30.195867245 0.141894s notice: Listening for client driver connections on port 28015
+2017-07-20T08:55:30.197099102 0.143125s notice: Listening for administrative HTTP connections on port 8081
+2017-07-20T08:55:30.197118935 0.143145s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-07-20T08:55:30.197123605 0.143149s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-07-20T08:55:30.201028506 0.147054s notice: Listening on http addresses: 127.0.0.1, 172.17.0.220, ::1, fe80::42:acff:fe11:dc%29828
+2017-07-20T08:55:30.201038480 0.147064s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-20T08:55:30.201041633 0.147067s notice: Server ready, "ppeetteerrs_food_voucher_server_4873469_zox" 9609f416-2f4c-4ec9-8e34-7bbe5e70043e
+2017-07-20T08:55:31.568215334 1.514242s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: Starting a new Raft election for term 2.
+2017-07-20T08:55:31.734699403 1.680726s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: This server is Raft leader for term 2. Latest log index is 5.
+2017-07-20T10:02:08.692982245 3998.639009s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: Configuration is changing.
+2017-07-21T03:49:30.521358902 68040.467387s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-07-21T19:01:30.667887564 122760.613918s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-07-21T22:46:30.699432050 136260.645461s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-07-22T02:21:30.706714785 149160.652742s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-07-25T10:50:31.167773191 438901.113800s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-07-25T14:46:31.194726239 453061.140753s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-07-25T20:41:50.895947926 474380.841974s info: Table 45b70ff5-22e6-4184-9abc-9cacd9c75743: Starting a new Raft election for term 1.
+2017-07-25T20:41:50.900766642 474380.846793s info: Table 45b70ff5-22e6-4184-9abc-9cacd9c75743: Added replica on this server.
+2017-07-25T20:41:50.927108472 474380.873135s info: Table 45b70ff5-22e6-4184-9abc-9cacd9c75743: This server is Raft leader for term 1. Latest log index is 0.
+2017-07-25T20:46:29.552931826 474659.498958s info: Table 9a101aba-11b1-402f-9a63-e6e6c9e0a7a9: Starting a new Raft election for term 1.
+2017-07-25T20:46:29.553460167 474659.499486s info: Table 9a101aba-11b1-402f-9a63-e6e6c9e0a7a9: Added replica on this server.
+2017-07-25T20:46:29.559758614 474659.505785s info: Table 9a101aba-11b1-402f-9a63-e6e6c9e0a7a9: This server is Raft leader for term 1. Latest log index is 0.
+2017-07-26T22:33:31.514961629 567481.460988s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-07-27T02:05:31.543535412 580201.489564s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-07-27T07:11:31.590405721 598561.536434s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-07-27T10:13:31.691184712 609481.637213s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-07-27T11:28:31.698706557 613981.644735s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-07-27T16:02:31.742228358 630421.688257s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-07-27T17:48:31.747553167 636781.693580s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-07-27T20:52:31.774014831 647821.720042s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-07-28T05:32:23.779783980 679013.725810s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2017-07-28T05:32:23.782292028 679013.728318s notice: Shutting down client connections...
+2017-07-28T05:32:23.816510535 679013.762537s notice: All client connections closed.
+2017-07-28T05:32:23.816675294 679013.762701s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-07-28T05:32:23.945841361 679013.891868s notice: Storage engine shut down.
+2017-07-28T05:32:26.166131639 0.025640s notice: Running rethinkdb 2.3.6~0trusty (GCC 4.8.2)...
+2017-07-28T05:32:26.171755407 0.031265s notice: Running on Linux 4.9.17-c9 x86_64
+2017-07-28T05:32:26.173372898 0.032879s notice: Loading data from directory /home/ubuntu/workspace/FoodVoucherSGServer/rethinkdb_data
+2017-07-28T05:32:26.221898012 0.081405s info: Automatically using cache size of 6493 MB
+2017-07-28T05:32:26.223487728 0.082993s notice: Listening for intracluster connections on port 29015
+2017-07-28T05:32:26.311921493 0.171427s notice: Listening for client driver connections on port 28015
+2017-07-28T05:32:26.312263332 0.171768s notice: Listening for administrative HTTP connections on port 8081
+2017-07-28T05:32:26.312265138 0.171770s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-07-28T05:32:26.312265822 0.171770s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-07-28T05:32:26.313689374 0.173194s notice: Listening on http addresses: 127.0.0.1, 172.17.0.220, ::1, fe80::42:acff:fe11:dc%29828
+2017-07-28T05:32:26.313799276 0.173304s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-28T05:32:26.313802268 0.173307s notice: Server ready, "ppeetteerrs_food_voucher_server_4873469_zox" 9609f416-2f4c-4ec9-8e34-7bbe5e70043e
+2017-07-28T05:32:27.344229147 1.203734s info: Table 45b70ff5-22e6-4184-9abc-9cacd9c75743: Starting a new Raft election for term 2.
+2017-07-28T05:32:27.363533919 1.223039s info: Table 45b70ff5-22e6-4184-9abc-9cacd9c75743: This server is Raft leader for term 2. Latest log index is 2.
+2017-07-28T05:32:27.532280156 1.391786s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: Starting a new Raft election for term 3.
+2017-07-28T05:32:27.544992777 1.404498s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: This server is Raft leader for term 3. Latest log index is 9.
+2017-07-28T05:32:27.687514921 1.547020s info: Table 9a101aba-11b1-402f-9a63-e6e6c9e0a7a9: Starting a new Raft election for term 2.
+2017-07-28T05:32:27.701760941 1.561266s info: Table 9a101aba-11b1-402f-9a63-e6e6c9e0a7a9: This server is Raft leader for term 2. Latest log index is 2.
+2017-07-28T08:57:43.972499365 12317.832006s info: Table 9a101aba-11b1-402f-9a63-e6e6c9e0a7a9: Configuration is changing.
+2017-07-28T13:28:37.674327610 28571.533834s info: Table 452f1ba4-bc37-4e47-9358-03d79959c4bf: Starting a new Raft election for term 1.
+2017-07-28T13:28:37.678558927 28571.538064s info: Table 452f1ba4-bc37-4e47-9358-03d79959c4bf: Added replica on this server.
+2017-07-28T13:28:37.686956882 28571.546462s info: Table 452f1ba4-bc37-4e47-9358-03d79959c4bf: This server is Raft leader for term 1. Latest log index is 0.
+2017-07-28T13:37:26.408595234 29100.268100s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-07-28T14:43:44.528000634 33078.387506s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2017-07-28T14:43:44.539534911 33078.399041s notice: Shutting down client connections...
+2017-07-28T14:43:44.575888010 33078.435394s notice: All client connections closed.
+2017-07-28T14:43:44.575904531 33078.435409s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-07-28T14:43:44.748095917 33078.607602s notice: Storage engine shut down.
+2017-07-28T14:43:45.947174822 0.068422s notice: Running rethinkdb 2.3.6~0trusty (GCC 4.8.2)...
+2017-07-28T14:43:45.951272676 0.072519s notice: Running on Linux 4.9.17-c9 x86_64
+2017-07-28T14:43:45.951363713 0.072607s notice: Loading data from directory /home/ubuntu/workspace/FoodVoucherSGServer/rethinkdb_data
+2017-07-28T14:43:45.995005683 0.116252s info: Automatically using cache size of 6983 MB
+2017-07-28T14:43:46.004345540 0.125590s notice: Listening for intracluster connections on port 29015
+2017-07-28T14:43:46.145230392 0.266474s notice: Listening for client driver connections on port 28015
+2017-07-28T14:43:46.145456120 0.266700s notice: Listening for administrative HTTP connections on port 8081
+2017-07-28T14:43:46.145463838 0.266707s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-07-28T14:43:46.145471706 0.266715s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-07-28T14:43:46.146604776 0.267848s notice: Listening on http addresses: 127.0.0.1, 172.17.0.220, ::1, fe80::42:acff:fe11:dc%29828
+2017-07-28T14:43:46.146606556 0.267850s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-28T14:43:46.146607424 0.267851s notice: Server ready, "ppeetteerrs_food_voucher_server_4873469_zox" 9609f416-2f4c-4ec9-8e34-7bbe5e70043e
+2017-07-28T14:43:47.097003976 1.218248s info: Table 45b70ff5-22e6-4184-9abc-9cacd9c75743: Starting a new Raft election for term 3.
+2017-07-28T14:43:47.105277042 1.226521s info: Table 45b70ff5-22e6-4184-9abc-9cacd9c75743: This server is Raft leader for term 3. Latest log index is 5.
+2017-07-28T14:43:47.424882446 1.546126s info: Table 9a101aba-11b1-402f-9a63-e6e6c9e0a7a9: Starting a new Raft election for term 3.
+2017-07-28T14:43:47.432017313 1.553262s info: Table 9a101aba-11b1-402f-9a63-e6e6c9e0a7a9: This server is Raft leader for term 3. Latest log index is 6.
+2017-07-28T14:43:47.836512621 1.957756s info: Table 452f1ba4-bc37-4e47-9358-03d79959c4bf: Starting a new Raft election for term 2.
+2017-07-28T14:43:47.843561449 1.964805s info: Table 452f1ba4-bc37-4e47-9358-03d79959c4bf: This server is Raft leader for term 2. Latest log index is 2.
+2017-07-28T14:43:48.058174391 2.179418s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: Starting a new Raft election for term 4.
+2017-07-28T14:43:48.067223612 2.188467s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: This server is Raft leader for term 4. Latest log index is 12.
+2017-07-28T17:47:00.027006567 10994.148250s info: Table e8f1f3d5-f315-4005-9164-e32f79169d4c: Starting a new Raft election for term 1.
+2017-07-28T17:47:00.036441198 10994.157686s info: Table e8f1f3d5-f315-4005-9164-e32f79169d4c: Added replica on this server.
+2017-07-28T17:47:00.053140493 10994.174385s info: Table e8f1f3d5-f315-4005-9164-e32f79169d4c: This server is Raft leader for term 1. Latest log index is 0.
+2017-07-28T18:30:22.323130023 13596.444374s info: Table e8f1f3d5-f315-4005-9164-e32f79169d4c: Configuration is changing.
+2017-07-28T18:30:29.546958431 13603.668202s info: Table e8f1f3d5-f315-4005-9164-e32f79169d4c: Configuration is changing.
+2017-07-28T18:30:37.004011261 13611.125255s info: Table e8f1f3d5-f315-4005-9164-e32f79169d4c: Configuration is changing.
+2017-07-28T18:31:01.147486170 13635.268730s info: Table 452f1ba4-bc37-4e47-9358-03d79959c4bf: Configuration is changing.
+2017-07-28T18:31:05.287147888 13639.408392s info: Table 452f1ba4-bc37-4e47-9358-03d79959c4bf: Configuration is changing.
+2017-07-28T18:31:09.593574198 13643.714818s info: Table 452f1ba4-bc37-4e47-9358-03d79959c4bf: Configuration is changing.
+2017-07-28T18:31:14.045041530 13648.166285s info: Table 452f1ba4-bc37-4e47-9358-03d79959c4bf: Configuration is changing.
+2017-07-29T07:03:35.617303982 58789.738548s info: Table 9a101aba-11b1-402f-9a63-e6e6c9e0a7a9: Configuration is changing.
+2017-07-29T07:18:19.173692012 59673.294936s info: Table 9a101aba-11b1-402f-9a63-e6e6c9e0a7a9: Configuration is changing.
+2017-07-29T07:18:29.544008470 59683.665252s info: Table 9a101aba-11b1-402f-9a63-e6e6c9e0a7a9: Configuration is changing.
+2017-07-29T07:48:15.985870645 61470.107115s info: Table 45b70ff5-22e6-4184-9abc-9cacd9c75743: Configuration is changing.
+2017-07-31T03:19:46.588473134 218160.709718s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-08-01T23:57:46.935434297 378841.056679s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-08-03T02:11:47.210939151 473281.332186s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-08-03T13:42:47.290884048 514741.412128s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-08-03T13:57:42.551910353 515636.673154s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2017-08-03T13:57:42.557037287 515636.678281s notice: Shutting down client connections...
+2017-08-03T13:57:42.585811958 515636.707056s notice: All client connections closed.
+2017-08-03T13:57:42.585836902 515636.707080s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-08-03T13:57:42.898564938 515637.019809s notice: Storage engine shut down.
+2017-08-03T13:57:44.364944392 0.032752s notice: Running rethinkdb 2.3.6~0trusty (GCC 4.8.2)...
+2017-08-03T13:57:44.368783693 0.036590s notice: Running on Linux 4.9.17-c9 x86_64
+2017-08-03T13:57:44.368862015 0.036667s notice: Loading data from directory /home/ubuntu/workspace/FoodVoucherSGServer/rethinkdb_data
+2017-08-03T13:57:44.411073604 0.078881s info: Automatically using cache size of 6659 MB
+2017-08-03T13:57:44.412517666 0.080322s notice: Listening for intracluster connections on port 29015
+2017-08-03T13:57:44.627559062 0.295364s notice: Listening for client driver connections on port 28015
+2017-08-03T13:57:44.628712791 0.296518s notice: Listening for administrative HTTP connections on port 8081
+2017-08-03T13:57:44.628744255 0.296548s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-08-03T13:57:44.628749695 0.296554s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-08-03T13:57:44.630569728 0.298374s notice: Listening on http addresses: 127.0.0.1, 172.17.0.220, ::1, fe80::42:acff:fe11:dc%29828
+2017-08-03T13:57:44.630577695 0.298382s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-08-03T13:57:44.630578879 0.298383s notice: Server ready, "ppeetteerrs_food_voucher_server_4873469_zox" 9609f416-2f4c-4ec9-8e34-7bbe5e70043e
+2017-08-03T13:57:45.551891567 1.219697s info: Table 45b70ff5-22e6-4184-9abc-9cacd9c75743: Starting a new Raft election for term 4.
+2017-08-03T13:57:45.559122670 1.226927s info: Table 45b70ff5-22e6-4184-9abc-9cacd9c75743: This server is Raft leader for term 4. Latest log index is 9.
+2017-08-03T13:57:45.708600453 1.376405s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: Starting a new Raft election for term 5.
+2017-08-03T13:57:45.715362705 1.383168s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: This server is Raft leader for term 5. Latest log index is 15.
+2017-08-03T13:57:46.097706093 1.765511s info: Table e8f1f3d5-f315-4005-9164-e32f79169d4c: Starting a new Raft election for term 2.
+2017-08-03T13:57:46.108299322 1.776104s info: Table e8f1f3d5-f315-4005-9164-e32f79169d4c: This server is Raft leader for term 2. Latest log index is 5.
+2017-08-03T13:57:46.394617820 2.062422s info: Table 9a101aba-11b1-402f-9a63-e6e6c9e0a7a9: Starting a new Raft election for term 4.
+2017-08-03T13:57:46.402991035 2.070796s info: Table 9a101aba-11b1-402f-9a63-e6e6c9e0a7a9: This server is Raft leader for term 4. Latest log index is 12.
+2017-08-03T13:57:46.440243527 2.108049s info: Table 452f1ba4-bc37-4e47-9358-03d79959c4bf: Starting a new Raft election for term 3.
+2017-08-03T13:57:46.447577726 2.115382s info: Table 452f1ba4-bc37-4e47-9358-03d79959c4bf: This server is Raft leader for term 3. Latest log index is 9.
+2017-08-04T06:37:44.953328508 60000.621135s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-08-04T11:01:37.523343100 75833.191148s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2017-08-04T11:01:37.524019931 75833.191824s notice: Shutting down client connections...
+2017-08-04T11:01:37.548461508 75833.216267s notice: All client connections closed.
+2017-08-04T11:01:37.548477078 75833.216281s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-08-04T11:01:37.614639222 75833.282444s notice: Storage engine shut down.
+2017-08-04T11:01:39.195101394 0.030946s notice: Running rethinkdb 2.3.6~0trusty (GCC 4.8.2)...
+2017-08-04T11:01:39.200748714 0.036594s notice: Running on Linux 4.9.17-c9 x86_64
+2017-08-04T11:01:39.200906087 0.036747s notice: Loading data from directory /home/ubuntu/workspace/FoodVoucherSGServer/rethinkdb_data
+2017-08-04T11:01:39.254459946 0.090304s info: Automatically using cache size of 6162 MB
+2017-08-04T11:01:39.261184348 0.097025s notice: Listening for intracluster connections on port 29015
+2017-08-04T11:01:39.523261336 0.359103s notice: Listening for client driver connections on port 28015
+2017-08-04T11:01:39.524219995 0.360061s notice: Listening for administrative HTTP connections on port 8081
+2017-08-04T11:01:39.524224878 0.360065s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-08-04T11:01:39.524229983 0.360070s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-08-04T11:01:39.525573760 0.361414s notice: Listening on http addresses: 127.0.0.1, 172.17.0.220, ::1, fe80::42:acff:fe11:dc%29828
+2017-08-04T11:01:39.525575216 0.361415s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-08-04T11:01:39.525575893 0.361416s notice: Server ready, "ppeetteerrs_food_voucher_server_4873469_zox" 9609f416-2f4c-4ec9-8e34-7bbe5e70043e
+2017-08-04T11:01:40.425753975 1.261595s info: Table 452f1ba4-bc37-4e47-9358-03d79959c4bf: Starting a new Raft election for term 4.
+2017-08-04T11:01:40.434891592 1.270732s info: Table 452f1ba4-bc37-4e47-9358-03d79959c4bf: This server is Raft leader for term 4. Latest log index is 12.
+2017-08-04T11:01:40.493806245 1.329647s info: Table 45b70ff5-22e6-4184-9abc-9cacd9c75743: Starting a new Raft election for term 5.
+2017-08-04T11:01:40.502694831 1.338536s info: Table 45b70ff5-22e6-4184-9abc-9cacd9c75743: This server is Raft leader for term 5. Latest log index is 12.
+2017-08-04T11:01:40.625262759 1.461104s info: Table 9a101aba-11b1-402f-9a63-e6e6c9e0a7a9: Starting a new Raft election for term 5.
+2017-08-04T11:01:40.632264452 1.468105s info: Table 9a101aba-11b1-402f-9a63-e6e6c9e0a7a9: This server is Raft leader for term 5. Latest log index is 15.
+2017-08-04T11:01:41.262918406 2.098759s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: Starting a new Raft election for term 6.
+2017-08-04T11:01:41.271413885 2.107255s info: Table a653ccf7-8e18-48ec-938d-a279c6584cb0: This server is Raft leader for term 6. Latest log index is 18.
+2017-08-04T11:01:41.437912518 2.273754s info: Table e8f1f3d5-f315-4005-9164-e32f79169d4c: Starting a new Raft election for term 3.
+2017-08-04T11:01:41.446837810 2.282679s info: Table e8f1f3d5-f315-4005-9164-e32f79169d4c: This server is Raft leader for term 3. Latest log index is 8.
+2017-08-05T07:25:39.613924471 73440.449767s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-08-05T13:15:39.672938720 94440.508782s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-08-05T21:14:39.715351709 123180.551194s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-08-06T03:38:39.735588217 146220.571431s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-08-06T21:16:39.820362948 209700.656207s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2017-08-07T15:08:08.343212860 273989.179055s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2017-08-07T15:08:08.376206164 273989.212047s notice: Shutting down client connections...
+2017-08-07T15:08:08.451311230 273989.287152s notice: All client connections closed.
+2017-08-07T15:08:08.451327419 273989.287168s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-08-07T15:08:09.398579618 273990.234421s notice: Storage engine shut down.
