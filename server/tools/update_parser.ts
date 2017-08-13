@@ -1,27 +1,33 @@
 import * as models from '../models/models';
-import { Auth, DB } from '../database';
+import { Auth, prod, test } from '../database';
 
 class UpdateParserClass {
 
   constructor() {
   }
 
-  public async update(request: models.DBUpdateRequest) {
+  public async update(request: models.DBUpdateRequest, real: boolean) {
     let response = {} as any;
     switch (request.type) {
       case "card" || "cards":
-        response = await this.updateCard(request.id, request.object);
+        response = await this.updateCard(request.id, request.object, real);
         break;
       case "user" || "users":
         break;
       case "payment" || "payments":
-        response = await this.updatePayment(request.id, request.object);
+        response = await this.updatePayment(request.id, request.object, real);
         break;
     }
     return response;
   }
 
-  private async updateCard(id: string, card: models.CardOut) {
+  private async updateCard(id: string, card: models.CardOut, real: boolean) {
+    let DB;
+    if (real) {
+      DB = prod;
+    } else {
+      DB = test;
+    }
     let charityProfile: models.UserOut = await Auth.get({ db: "auth", table: "users", index: "primary", valueIsInt: false, value: card.charityID, limit: -1 });
     let creatorProfile: models.UserOut = await Auth.get({ db: "auth", table: "users", index: "primary", valueIsInt: false, value: card.creatorID, limit: -1 });
     let parsedCard = {
@@ -43,7 +49,13 @@ class UpdateParserClass {
     
   }
 
-  private async updatePayment(id: string, payment: models.Payment) {
+  private async updatePayment(id: string, payment: models.Payment, real: boolean) {
+    let DB;
+    if (real) {
+      DB = prod;
+    } else {
+      DB = test;
+    }
     payment.date = new Date(payment.date);
     let response = DB.updateItem("payments", id, payment);
     return response;

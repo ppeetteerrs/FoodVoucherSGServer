@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as bwipjs from 'bwip-js';
 import * as PDFDocument from 'pdfkit';
 import { Mailer } from './mailer';
-import { Auth, DB } from '../database';
+import { Auth, prod, test } from '../database';
 import * as models from '../models/models';
 
 class GeneratorClass {
@@ -17,7 +17,13 @@ class GeneratorClass {
 
   }
 
-  async generatePDF(cardsBatch: models.CardsBatchIn) {
+  async generatePDF(cardsBatch: models.CardsBatchIn, real: boolean) {
+    let DB;
+    if (real) {
+      DB = prod;
+    } else {
+      DB = test;
+    }
     let parsedcardsBatch: models.CardsBatchOut = await this.parseCardBatch(cardsBatch);
 
     //Generate new Cards
@@ -25,11 +31,11 @@ class GeneratorClass {
     let barcodeArray: number[] = this.generateCodeArray(parsedcardsBatch.amount, existing_barcodes);
 
     //Save the Card Batch
-    let batch_uids: string[] = await DB.insertItems({ table: "card_batches", object: parsedcardsBatch});
+    let batch_uids: string[] = await DB.insertItems({ table: "card_batches", object: parsedcardsBatch });
 
     //Save the new Cards
     let card_objects = this.createCardObjects(parsedcardsBatch, batch_uids[0], barcodeArray);
-    DB.insertItems({table: "cards", object: card_objects});
+    DB.insertItems({ table: "cards", object: card_objects });
 
     //Create PDF File
     let barcodePNGBufferArray = await this.createBarcodesPNGBuffers(barcodeArray);

@@ -1,9 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const rethinkdb_1 = require("../database/rethinkdb");
+const database_1 = require("../database");
 class ValidatorClass {
-    async check(code) {
-        let barcodeObjects = await rethinkdb_1.DB.getAll({ db: "db", table: "cards", index: "barcode", valueIsInt: true, value: code, limit: 1 });
+    async check(code, real) {
+        let DB;
+        if (real) {
+            DB = database_1.prod;
+        }
+        else {
+            DB = database_1.test;
+        }
+        let barcodeObjects = await DB.getAll({ db: "db", table: "cards", index: "barcode", valueIsInt: true, value: code, limit: 1 });
         if (barcodeObjects.length > 0) {
             let cardObject = barcodeObjects[0];
             //First must be enabled

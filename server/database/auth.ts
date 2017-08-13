@@ -1,4 +1,3 @@
-import { DB } from './rethinkdb';
 import * as r from "rethinkdb";
 import * as models from "../models/models";
 

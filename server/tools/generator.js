@@ -13,16 +13,23 @@ class GeneratorClass {
         this.Barcode_Width = 100;
         this.Barcode_Coords = [0, 0];
     }
-    async generatePDF(cardsBatch) {
+    async generatePDF(cardsBatch, real) {
+        let DB;
+        if (real) {
+            DB = database_1.prod;
+        }
+        else {
+            DB = database_1.test;
+        }
         let parsedcardsBatch = await this.parseCardBatch(cardsBatch);
         //Generate new Cards
-        let existing_barcodes = await database_1.DB.getAllBarcodes();
+        let existing_barcodes = await DB.getAllBarcodes();
         let barcodeArray = this.generateCodeArray(parsedcardsBatch.amount, existing_barcodes);
         //Save the Card Batch
-        let batch_uids = await database_1.DB.insertItems({ table: "card_batches", object: parsedcardsBatch });
+        let batch_uids = await DB.insertItems({ table: "card_batches", object: parsedcardsBatch });
         //Save the new Cards
         let card_objects = this.createCardObjects(parsedcardsBatch, batch_uids[0], barcodeArray);
-        database_1.DB.insertItems({ table: "cards", object: card_objects });
+        DB.insertItems({ table: "cards", object: card_objects });
         //Create PDF File
         let barcodePNGBufferArray = await this.createBarcodesPNGBuffers(barcodeArray);
         let filename = this.createPDFFile(batch_uids[0], barcodePNGBufferArray);

@@ -1,9 +1,15 @@
-import { DB } from "../database/rethinkdb";
+import { prod, test } from "../database";
 import * as models from "../models/models"
 
 class ValidatorClass {
 
-  async check(code: number) {
+  async check(code: number, real: boolean) {
+    let DB;
+    if (real) {
+      DB = prod;
+    } else {
+      DB = test;
+    }
     let barcodeObjects: models.CardOut[] = await DB.getAll({ db: "db", table: "cards", index: "barcode", valueIsInt: true, value: code, limit: 1 });
     if (barcodeObjects.length > 0) {
       let cardObject = barcodeObjects[0];

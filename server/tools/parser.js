@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const rethinkdb_1 = require("../database/rethinkdb");
+const database_1 = require("../database");
 class ParserClass {
     constructor() {
     }
-    async calculateRedemption(card, monthlyTransactions, dailyTransactions) {
+    async calculateRedemption(card, monthlyTransactions, dailyTransactions, real) {
         let monthlyRedemption = 0;
         let dailyRedemption = 0;
         for (let transaction of monthlyTransactions) {
@@ -19,21 +19,42 @@ class ParserClass {
         }
         card.redeemedThisMonth = monthlyRedemption;
         card.redeemedToday = dailyRedemption;
-        let response = await rethinkdb_1.DB.updateItem("cards", card.id, card);
+        let DB;
+        if (real) {
+            DB = database_1.prod;
+        }
+        else {
+            DB = database_1.test;
+        }
+        let response = await DB.updateItem("cards", card.id, card);
         return card;
     }
-    async parseCardArray(cards) {
-        let monthlyTransactions = await rethinkdb_1.DB.getMonthlyTransactions();
-        let dailyTransactions = await rethinkdb_1.DB.getDailyTransactions();
+    async parseCardArray(cards, real) {
+        let DB;
+        if (real) {
+            DB = database_1.prod;
+        }
+        else {
+            DB = database_1.test;
+        }
+        let monthlyTransactions = await DB.getMonthlyTransactions();
+        let dailyTransactions = await DB.getDailyTransactions();
         for (let card of cards) {
-            card = await this.calculateRedemption(card, monthlyTransactions, dailyTransactions);
+            card = await this.calculateRedemption(card, monthlyTransactions, dailyTransactions, real);
         }
         return cards;
     }
-    async parseCard(card) {
-        let monthlyTransactions = await rethinkdb_1.DB.getMonthlyTransactions();
-        let dailyTransactions = await rethinkdb_1.DB.getDailyTransactions();
-        card = await this.calculateRedemption(card, monthlyTransactions, dailyTransactions);
+    async parseCard(card, real) {
+        let DB;
+        if (real) {
+            DB = database_1.prod;
+        }
+        else {
+            DB = database_1.test;
+        }
+        let monthlyTransactions = await DB.getMonthlyTransactions();
+        let dailyTransactions = await DB.getDailyTransactions();
+        card = await this.calculateRedemption(card, monthlyTransactions, dailyTransactions, real);
         return card;
     }
 }

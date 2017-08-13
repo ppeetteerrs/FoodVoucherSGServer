@@ -1,4 +1,5 @@
-import { DB } from "./rethinkdb";
+import { prod } from "./rethinkdb_prod";
+import { test } from "./rethinkdb_test";
 import { Auth } from "./auth";
 
-export { DB, Auth };
+export { prod, test, Auth };
