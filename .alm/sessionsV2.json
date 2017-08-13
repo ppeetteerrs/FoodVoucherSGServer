@@ -1,0 +1,53 @@
+{
+  "sessions": [
+    {
+      "id": "36c2a73d-29b8-4731-bacb-a301456f95e9",
+      "tabLayout": {
+        "type": "stack",
+        "width": 100,
+        "height": 100,
+        "tabs": [
+          {
+            "id": "ecb7fdda-5a9f-4111-9b78-1579c6b5d4ec",
+            "relativeUrl": "file://./server/app.ts",
+            "additionalData": null
+          },
+          {
+            "id": "272dcc14-a2ae-4e53-bbf4-56d0c9b6e0ab",
+            "relativeUrl": "file://./DBSetup/setup.ts",
+            "additionalData": null
+          },
+          {
+            "id": "d764747f-a82f-4770-a2f0-c26e393b3f89",
+            "relativeUrl": "file://./server/tools/generator.ts",
+            "additionalData": null
+          },
+          {
+            "id": "d1255b0d-af3c-44a4-b84b-8579c885ed1e",
+            "relativeUrl": "file://./server/database/auth.ts",
+            "additionalData": null
+          },
+          {
+            "id": "21f76f3b-8466-440d-9f65-b6c32ccce663",
+            "relativeUrl": "file://./server/models/card.ts",
+            "additionalData": null
+          },
+          {
+            "id": "de801054-666d-4a94-8d0c-9156bcbdf5ad",
+            "relativeUrl": "file://./server/models/cards_batch.ts",
+            "additionalData": null
+          }
+        ],
+        "subItems": [],
+        "activeItemIndex": 0
+      },
+      "lastUsed": 1502626374151,
+      "fileTreeExpanded": true,
+      "selectedTabId": "de801054-666d-4a94-8d0c-9156bcbdf5ad",
+      "errorsExpanded": true,
+      "fileTreeWidth": 174,
+      "mainPanelHeight": 285
+    }
+  ],
+  "relativePathToTsconfig": "./tsconfig.json"
+}
