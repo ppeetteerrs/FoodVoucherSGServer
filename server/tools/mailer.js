@@ -9,16 +9,16 @@ class MailerClass {
             port: 465,
             secure: true,
             auth: {
-                user: 'ppeetteerrsx@gmail.com',
-                pass: 'dkmlwxwmbotmecst'
+                user: 'foodvouchersingapore@gmail.com',
+                pass: 'zaintzobqgtwyufy'
             }
         });
     }
     sendMail(toEmail, pdfFileName) {
         let mailOptions = {
-            from: 'Peter Yuen <ppeetteerrsx@gmail.com>',
+            from: 'Food Voucher SG Admin <foodvouchersingapore@gmail.com>',
             to: toEmail,
-            subject: '✔ PDF Generated ✔',
+            subject: 'Generated Meal Cards for Food Voucher SG',
             text: 'Please check the attachment',
             attachments: [{
                     filename: "barcoded.pdf",

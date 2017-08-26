@@ -11,7 +11,8 @@ class GeneratorClass {
   private Barcode_Length = 13;
   private Card_Size = { height: 150, width: 241 };
   private Barcode_Width = 100;
-  private Barcode_Coords = [0, 0];
+  private Barcode_Coords = [70, 110];
+  private Card_Layout = [3, 3]; //Rows, Columns
 
   constructor() {
 
@@ -114,10 +115,63 @@ class GeneratorClass {
   //Create a PDF File from an array of barcode PNG buffers
   createPDFFile(uid, barcodeArray) {
     var doc = new PDFDocument({
-      layout: "landscape"
+      layout: "landscape",
+      size: [595.28, 841.89]
     });
     let filename = "../pdf/test/" + uid + ".pdf";
     let stream = doc.pipe(fs.createWriteStream(filename));
+    let total_double_pages = Math.ceil(barcodeArray.length / (this.Card_Layout[0] * this.Card_Layout[1]));
+    //For each double page, generate front and  back side
+    for (let i = 0; i < total_double_pages; i++) {
+      //Front Page
+      if (i != 0) {
+        doc.addPage({
+          layout: "landscape",
+          size: [595.28, 841.89]
+        });
+      }
+      //For each card (row, column)
+      for (let j = 0; j < this.Card_Layout[0]; j++) {
+        for (let k = 0; k < this.Card_Layout[1]; k++) {
+          let barcode_index = i * (this.Card_Layout[0] * this.Card_Layout[1]) + j * this.Card_Layout[1] + k;
+          if (barcode_index < barcodeArray.length) {
+            let x = j * (240 + 18) + 18;
+            let y = k * (150 + 40) + 20;
+            // Add the Card Border
+            doc.image("../assets/img/front.jpg", x, y, {
+              height: this.Card_Size.height,
+              width: this.Card_Size.width
+            });
+            doc.image(barcodeArray[barcode_index], x + this.Barcode_Coords[0], y + this.Barcode_Coords[1], {
+              width: this.Barcode_Width
+            });
+          }
+        }
+      }
+      //Back Page
+      /*
+      doc.addPage({
+        layout: "landscape",
+        size: [595.28, 841.89]
+      });
+      //For each card (row, column)
+      for (let j = 0; j < this.Card_Layout[0]; j++) {
+        for (let k = 0; k < this.Card_Layout[1]; k++) {
+          let barcode_index = i * (this.Card_Layout[0] * this.Card_Layout[1]) + j * this.Card_Layout[1] + k;
+          if (barcode_index < barcodeArray.length) {
+            let x = 841.89 - (j * (240 + 18) + 18) - 240;
+            let y = k * (150 + 40) + 20;
+            // Add the Card Border
+            doc.image("../assets/img/back.jpg", x, y, {
+              height: this.Card_Size.height,
+              width: this.Card_Size.width
+            });
+          }
+        }
+      }
+      */
+    }
+    /*
     for (var i = 0; i < barcodeArray.length; i++) {
       let pageIndex = i % 9;
       let rowIndex = pageIndex % 3;
@@ -141,6 +195,7 @@ class GeneratorClass {
         width: this.Barcode_Width
       });
     }
+    */
     doc.end();
     return filename;
   };

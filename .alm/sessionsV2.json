@@ -36,17 +36,22 @@
             "id": "de801054-666d-4a94-8d0c-9156bcbdf5ad",
             "relativeUrl": "file://./server/models/cards_batch.ts",
             "additionalData": null
+          },
+          {
+            "id": "c2def5ff-781c-42a5-a1ca-e72ec9d8a2ba",
+            "relativeUrl": "file://./server/tools/mailer.ts",
+            "additionalData": null
           }
         ],
         "subItems": [],
         "activeItemIndex": 0
       },
-      "lastUsed": 1502626374151,
+      "lastUsed": 1502985621926,
       "fileTreeExpanded": true,
-      "selectedTabId": "de801054-666d-4a94-8d0c-9156bcbdf5ad",
+      "selectedTabId": "d764747f-a82f-4770-a2f0-c26e393b3f89",
       "errorsExpanded": true,
       "fileTreeWidth": 174,
-      "mainPanelHeight": 285
+      "mainPanelHeight": 132
     }
   ],
   "relativePathToTsconfig": "./tsconfig.json"
