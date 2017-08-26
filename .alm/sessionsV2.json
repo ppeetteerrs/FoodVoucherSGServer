@@ -41,14 +41,19 @@
             "id": "c2def5ff-781c-42a5-a1ca-e72ec9d8a2ba",
             "relativeUrl": "file://./server/tools/mailer.ts",
             "additionalData": null
+          },
+          {
+            "id": "c9e8357f-1fa8-4ce5-8ea0-38f76202a6f6",
+            "relativeUrl": "file://./server/tools/validator.ts",
+            "additionalData": null
           }
         ],
         "subItems": [],
         "activeItemIndex": 0
       },
-      "lastUsed": 1503729153755,
+      "lastUsed": 1503733386469,
       "fileTreeExpanded": true,
-      "selectedTabId": "d764747f-a82f-4770-a2f0-c26e393b3f89",
+      "selectedTabId": "c9e8357f-1fa8-4ce5-8ea0-38f76202a6f6",
       "errorsExpanded": true,
       "fileTreeWidth": 174,
       "mainPanelHeight": 132
