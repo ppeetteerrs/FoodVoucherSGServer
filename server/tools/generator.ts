@@ -19,6 +19,7 @@ class GeneratorClass {
   }
 
   async generatePDF(cardsBatch: models.CardsBatchIn, real: boolean) {
+    console.log(cardsBatch);
     let DB;
     if (real) {
       DB = prod;

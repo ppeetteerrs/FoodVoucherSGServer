@@ -15,6 +15,7 @@ class GeneratorClass {
         this.Card_Layout = [3, 3]; //Rows, Columns
     }
     async generatePDF(cardsBatch, real) {
+        console.log(cardsBatch);
         let DB;
         if (real) {
             DB = database_1.prod;
