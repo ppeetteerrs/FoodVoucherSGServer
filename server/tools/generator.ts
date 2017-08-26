@@ -41,7 +41,7 @@ class GeneratorClass {
 
     //Create PDF File
     let barcodePNGBufferArray = await this.createBarcodesPNGBuffers(barcodeArray);
-    let filename = this.createPDFFile(batch_uids[0], barcodePNGBufferArray);
+    let filename = this.createPDFFile(batch_uids[0], barcodePNGBufferArray, real);
 
     //Send PDF File
     await Mailer.sendMail(parsedcardsBatch.charityEmail, filename);
@@ -114,12 +114,17 @@ class GeneratorClass {
   };
 
   //Create a PDF File from an array of barcode PNG buffers
-  createPDFFile(uid, barcodeArray) {
+  createPDFFile(uid, barcodeArray, real:boolean) {
     var doc = new PDFDocument({
       layout: "landscape",
       size: [595.28, 841.89]
     });
-    let filename = "../pdf/test/" + uid + ".pdf";
+    let filename
+    if (real) {
+      filename = "../pdf/production/" + uid + ".pdf";
+    } else {
+      filename = "../pdf/test/" + uid + ".pdf";
+    }
     let stream = doc.pipe(fs.createWriteStream(filename));
     let total_double_pages = Math.ceil(barcodeArray.length / (this.Card_Layout[0] * this.Card_Layout[1]));
     //For each double page, generate front and  back side
