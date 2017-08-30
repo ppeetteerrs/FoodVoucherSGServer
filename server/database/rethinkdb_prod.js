@@ -41,14 +41,14 @@ class DBClass {
     async updateItem(table, id, object) {
         await this.ready();
         let data_response = await r.table(table).get(id).update(object).run(this.db);
-        console.log(data_response);
+        //console.log(data_response);
         return data_response;
     }
     async uploadTransaction(transaction) {
         await this.ready();
         transaction.date = new Date();
         let data_response = await r.table("transactions").insert(transaction).run(this.db);
-        console.log(data_response);
+        //console.log(data_response);
         return data_response;
     }
     async uploadPayment(payment) {
@@ -56,7 +56,7 @@ class DBClass {
         payment.amount = parseInt(payment.amount.toString());
         payment.date = new Date();
         let data_response = await r.table("payments").insert(payment).run(this.db);
-        console.log(data_response);
+        //console.log(data_response);
         return data_response;
     }
     async getMonthlyTransactions() {

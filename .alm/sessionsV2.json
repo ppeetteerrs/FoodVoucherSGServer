@@ -13,50 +13,25 @@
             "additionalData": null
           },
           {
-            "id": "272dcc14-a2ae-4e53-bbf4-56d0c9b6e0ab",
-            "relativeUrl": "file://./DBSetup/setup.ts",
+            "id": "bdfac083-8397-402e-a611-1178d06a85b2",
+            "relativeUrl": "file://./server/qrious_test.ts",
             "additionalData": null
           },
           {
-            "id": "d764747f-a82f-4770-a2f0-c26e393b3f89",
+            "id": "ea49310a-ec8f-46cc-a581-40c22a4c5e29",
             "relativeUrl": "file://./server/tools/generator.ts",
-            "additionalData": null
-          },
-          {
-            "id": "d1255b0d-af3c-44a4-b84b-8579c885ed1e",
-            "relativeUrl": "file://./server/database/auth.ts",
-            "additionalData": null
-          },
-          {
-            "id": "21f76f3b-8466-440d-9f65-b6c32ccce663",
-            "relativeUrl": "file://./server/models/card.ts",
-            "additionalData": null
-          },
-          {
-            "id": "de801054-666d-4a94-8d0c-9156bcbdf5ad",
-            "relativeUrl": "file://./server/models/cards_batch.ts",
-            "additionalData": null
-          },
-          {
-            "id": "c2def5ff-781c-42a5-a1ca-e72ec9d8a2ba",
-            "relativeUrl": "file://./server/tools/mailer.ts",
-            "additionalData": null
-          },
-          {
-            "id": "c9e8357f-1fa8-4ce5-8ea0-38f76202a6f6",
-            "relativeUrl": "file://./server/tools/validator.ts",
             "additionalData": null
           }
         ],
         "subItems": [],
         "activeItemIndex": 0
       },
-      "lastUsed": 1503733386469,
+      "lastUsed": 1504076474654,
       "fileTreeExpanded": true,
-      "selectedTabId": "c9e8357f-1fa8-4ce5-8ea0-38f76202a6f6",
+      "selectedTabId": "ea49310a-ec8f-46cc-a581-40c22a4c5e29",
       "errorsExpanded": true,
       "fileTreeWidth": 174,
-      "mainPanelHeight": 132
+      "mainPanelHeight": 188
     }
   ],
   "relativePathToTsconfig": "./tsconfig.json"

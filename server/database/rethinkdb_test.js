@@ -42,7 +42,7 @@ class DBClass {
     async updateItem(table, id, object) {
         await this.ready();
         let data_response = await r.table(table).get(id).update(object).run(this.db);
-        console.log(data_response);
+        //console.log(data_response);
         return data_response;
     }
     async uploadTransaction(transaction) {
@@ -58,7 +58,7 @@ class DBClass {
             transaction.date = new Date();
         }
         let data_response = await r.table("transactions").insert(transaction).run(this.db);
-        console.log(data_response);
+        //console.log(data_response);
         return data_response;
     }
     async uploadPayment(payment) {
@@ -75,7 +75,7 @@ class DBClass {
             payment.date = new Date();
         }
         let data_response = await r.table("payments").insert(payment).run(this.db);
-        console.log(data_response);
+        //console.log(data_response);
         return data_response;
     }
     async getMonthlyTransactions() {
@@ -93,7 +93,7 @@ class DBClass {
     async getAllBarcodes() {
         await this.ready();
         let response = await r.table("cards").pluck("barcode").coerceTo("array").run(this.db);
-        console.log(response);
+        //console.log(response);
         return response;
     }
     connectDB(callback) {

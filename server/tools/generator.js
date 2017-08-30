@@ -5,6 +5,7 @@ const bwipjs = require("bwip-js");
 const PDFDocument = require("pdfkit");
 const mailer_1 = require("./mailer");
 const database_1 = require("../database");
+const QRCode = require("qrcode");
 class GeneratorClass {
     constructor() {
         this.IDENTIFIER = (8000010000204).toString().split("").map(Number);
@@ -12,10 +13,12 @@ class GeneratorClass {
         this.Card_Size = { height: 150, width: 241 };
         this.Barcode_Width = 100;
         this.Barcode_Coords = [70, 110];
+        this.QR_Width = 75;
+        this.QR_Coords = [151, 60];
         this.Card_Layout = [3, 3]; //Rows, Columns
     }
-    async generatePDF(cardsBatch, real) {
-        console.log(cardsBatch);
+    async generatePDF(cardsBatch, real, qr) {
+        //Select database
         let DB;
         if (real) {
             DB = database_1.prod;
@@ -23,6 +26,7 @@ class GeneratorClass {
         else {
             DB = database_1.test;
         }
+        //Generate the batch info
         let parsedcardsBatch = await this.parseCardBatch(cardsBatch);
         //Generate new Cards
         let existing_barcodes = await DB.getAllBarcodes();
@@ -33,8 +37,14 @@ class GeneratorClass {
         let card_objects = this.createCardObjects(parsedcardsBatch, batch_uids[0], barcodeArray);
         DB.insertItems({ table: "cards", object: card_objects });
         //Create PDF File
-        let barcodePNGBufferArray = await this.createBarcodesPNGBuffers(barcodeArray);
-        let filename = this.createPDFFile(batch_uids[0], barcodePNGBufferArray, real);
+        let PNGBufferArray;
+        if (qr) {
+            PNGBufferArray = await this.createQRCodesPNGBuffers(barcodeArray);
+        }
+        else {
+            PNGBufferArray = await this.createBarcodesPNGBuffers(barcodeArray);
+        }
+        let filename = this.createPDFFile(batch_uids[0], barcodeArray, PNGBufferArray, real, qr);
         //Send PDF File
         await mailer_1.Mailer.sendMail(parsedcardsBatch.charityEmail, filename);
         return filename;
@@ -102,8 +112,29 @@ class GeneratorClass {
         return promise;
     }
     ;
+    createQRCodesPNGBuffers(codeArray) {
+        let promise = new Promise((resolve, reject) => {
+            let qrArray = [];
+            for (var i = 0; i < codeArray.length; i++) {
+                QRCode.toDataURL("" + codeArray[i], {
+                    margin: 2
+                }, function (err, url) {
+                    let url_string = url.split(",")[1];
+                    //console.log(url_string);
+                    let buffer = Buffer.from(url_string, "base64");
+                    //console.log(buffer.toString());
+                    qrArray.push(buffer);
+                    if (qrArray.length == codeArray.length) {
+                        //console.log("done");
+                        resolve(qrArray);
+                    }
+                });
+            }
+        });
+        return promise;
+    }
     //Create a PDF File from an array of barcode PNG buffers
-    createPDFFile(uid, barcodeArray, real) {
+    createPDFFile(uid, barcodeArray, barcodePNGArray, real, qr) {
         var doc = new PDFDocument({
             layout: "landscape",
             size: [595.28, 841.89]
@@ -116,7 +147,7 @@ class GeneratorClass {
             filename = "../pdf/test/" + uid + ".pdf";
         }
         let stream = doc.pipe(fs.createWriteStream(filename));
-        let total_double_pages = Math.ceil(barcodeArray.length / (this.Card_Layout[0] * this.Card_Layout[1]));
+        let total_double_pages = Math.ceil(barcodePNGArray.length / (this.Card_Layout[0] * this.Card_Layout[1]));
         //For each double page, generate front and  back side
         for (let i = 0; i < total_double_pages; i++) {
             //Front Page
@@ -130,7 +161,7 @@ class GeneratorClass {
             for (let j = 0; j < this.Card_Layout[0]; j++) {
                 for (let k = 0; k < this.Card_Layout[1]; k++) {
                     let barcode_index = i * (this.Card_Layout[0] * this.Card_Layout[1]) + j * this.Card_Layout[1] + k;
-                    if (barcode_index < barcodeArray.length) {
+                    if (barcode_index < barcodePNGArray.length) {
                         let x = j * (240 + 18) + 18;
                         let y = k * (150 + 40) + 20;
                         // Add the Card Border
@@ -138,9 +169,24 @@ class GeneratorClass {
                             height: this.Card_Size.height,
                             width: this.Card_Size.width
                         });
-                        doc.image(barcodeArray[barcode_index], x + this.Barcode_Coords[0], y + this.Barcode_Coords[1], {
-                            width: this.Barcode_Width
-                        });
+                        //Add the QR Code
+                        if (qr) {
+                            doc.image(barcodePNGArray[barcode_index], x + this.QR_Coords[0], y + this.QR_Coords[1], {
+                                width: this.QR_Width,
+                                height: this.QR_Width
+                            });
+                            // Add the Barcode Number
+                            doc.text("" + barcodeArray[barcode_index], x + this.QR_Coords[0], y + this.QR_Coords[1] + this.QR_Width, {
+                                width: 75,
+                                height: 15,
+                                align: "center"
+                            });
+                        }
+                        else {
+                            doc.image(barcodePNGArray[barcode_index], x + this.Barcode_Coords[0], y + this.Barcode_Coords[1], {
+                                width: this.Barcode_Width
+                            });
+                        }
                     }
                 }
             }

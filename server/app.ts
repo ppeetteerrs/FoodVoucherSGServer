@@ -31,13 +31,13 @@ app.get('/', (req, res) => {
 //Requesting For PDF
 app.post('/prod/generate_barcodes', (req, res) => {
   let cards_batch: models.CardsBatchIn = req.body;
-  Generator.generatePDF(cards_batch, true).then((filename) => {
+  Generator.generatePDF(cards_batch, true, true).then((filename) => {
     res.json("PDF Sent " + filename);
   });
 })
 app.post('/test/generate_barcodes', (req, res) => {
   let cards_batch: models.CardsBatchIn = req.body;
-  Generator.generatePDF(cards_batch, false).then((filename) => {
+  Generator.generatePDF(cards_batch, false, true).then((filename) => {
     res.json("PDF Sent " + filename);
   });
 })
